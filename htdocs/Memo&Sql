@@ -8,15 +8,10 @@ create table coupon(){
   c_num number primary key not null,
   c_counum varchar2(200),  # 쿠폰의 번호
   c_group varchar2(200),   #그룹
+  c_date varchar2(200),   #발행 날짜
   c_used varchar2(20)    #0과 1로 구분 
-};
-
-
-create table usedcoupon(){
-  r_num number primary key not null,
-  c_num number reference to coupon(c_num),  # 쿠폰 테이블과 연결을 하기 위한 부분
-  r_usedid varchar2(200),  # 쿠폰 사용한 아이디
-  r_usedate varchar2(200),   #사용날짜
+  r_usedid varchar2(200),  # 쿠폰 사용한 아이디- 초기에는 0으로 
+  r_usedate varchar2(200),   #사용날짜 - 초기에는 0으로 
 };
 
 오라클 연동에 실패해 사용을 하려고 했던 DB를 여기에 적어뒀습니다.
